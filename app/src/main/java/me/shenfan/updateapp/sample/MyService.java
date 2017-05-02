@@ -24,11 +24,13 @@ public class MyService extends Service {
 
     private void showDialog() {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext(),R.style.Theme_AppCompat_Light_Dialog_Alert);
         builder.setTitle("sssss");
         builder.setMessage("aaaaa");
+        builder.setView(R.layout.dialog_layout);
         AlertDialog show = builder.create();
         show.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+        show.show();
 
     }
 }
